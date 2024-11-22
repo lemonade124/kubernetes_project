@@ -9,12 +9,10 @@ Create the terraform main file for the 3 node k8s cluster
 
 Deployed ansible core host manually using ubuntu 2404
 
-hostname: ansible-core 
-ip: 10.0.1.2
 
-hostname: node-01
-ip: 10.0.2.10
-hostname: node-02
-ip: 10.0.2.20
-hostname: node-03
-ip: 10.0.2.30
+| hostname | ip |
+| --- | --- |
+| ansible-core | 10.0.1.2 |
+| node-01 | 10.0.2.10 |
+| node-02 | 10.0.2.20 |
+| node-03 | 10.0.2.30 |
