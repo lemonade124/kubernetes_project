@@ -43,11 +43,11 @@ vi kube_inventory.yml
 ---
 masternode:
   hosts:
-    192.168.2.87:
+    10.0.2.10:
 workernodes:
   hosts:
-    192.168.2.88
-    192.168.2.86
+    10.0.2.20
+    10.0.2.30
   vars:
     ansible_user: vagrant
 ```
@@ -114,3 +114,5 @@ Then running the following and entering the password, it worked.
 ```
 ansible workernodes -m ping -i kube_inventory.yml -k
 ```
+
+### Create playbook
