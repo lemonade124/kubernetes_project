@@ -31,5 +31,5 @@ output "IPAddr_2" {
 }
 
 output "IPAddr_3" {
-  value = element(virtualbox_vm.node.*.network_adapter.0.ipv4_address, 2)
+  value = element(virtualbox_vm.node.*.network_adapter.0.ipv4_address, 3)
 }
