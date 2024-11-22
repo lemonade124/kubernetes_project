@@ -22,5 +22,5 @@ on ansible-core install pipx
 sudo apt upgrade
 sudo apt install pipx
 
-##install ansible core
+## install ansible core
 pipx install ansible-core
