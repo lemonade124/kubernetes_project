@@ -18,9 +18,38 @@ Deployed ansible core host manually using ubuntu 2404
 | node-03 | 10.0.2.30 |
 
 
-on ansible-core install pipx
+ping test nodes from ansible core
+on ansible-core install
 sudo apt upgrade
 sudo apt install pipx
 
 ## install ansible core
-pipx install ansible-core
+sudo apt install ansible-core
+
+create folder inventory and playbook:
+mkdir inventory 
+cd .. 
+mkdir playbook
+cd ../inventory
+
+create ini file for inventory
+vi kube_inventory.yml
+
+```
+---
+masternode:
+  hosts:
+    10.0.2.10
+workernodes:
+  hosts:
+    10.0.2.20
+    10.0.2.30
+  vars:
+    ansible_user: vagrant
+```
+
+validate the inventory file:
+ansible-inventory -i kube_inventory.ini --list
+
+ping the master and workers group
+ansible master -m ping -i i
