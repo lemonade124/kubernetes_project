@@ -82,13 +82,13 @@ updated formatting:
 ---
 masternode:
   hosts:
-    192.168.2.87:
+    10.0.2.10:
 workernodes:
   hosts:
-    192.168.2.88:
-    192.168.2.86:
+    10.0.2.20:
+    10.0.2.30:
   vars:
-    ansible_user: vagrant
+    ansible_user: test123
 
 ```
 ping still failed as I had to add the ssh fingerprint. after testing them one at a time and failing it worked with explicit user/password
@@ -99,13 +99,13 @@ updated yaml to include the ssh user variable
 ---
 masternode:
   hosts:
-    192.168.2.87:
+    10.0.2.10:
   vars:
     ansible_user: test123
 workernodes:
   hosts:
-    192.168.2.88:
-    192.168.2.86:
+    10.0.2.20:
+    10.0.2.30:
   vars:
     ansible_user: test123
 ```
