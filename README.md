@@ -4,11 +4,12 @@ Deploying a Kubernetes cluster in virtualbox using terraform/ansible
 Set the virtualbox environment variable path in powershell - this is for terraform.
 $env:PATH = $env:PATH + ";C:\Program Files\Oracle\VirtualBox"
 
+
 https://registry.terraform.io/providers/terra-farm/virtualbox/latest/docs
 Create the terraform main file for the 3 node k8s cluster. see terraform file for cluster.
 
 Deployed ansible core host manually using ubuntu 2404
-
+https://portal.cloud.hashicorp.com/vagrant/discover/generic/ubuntu2204
 
 | hostname | ip |
 | --- | --- |
